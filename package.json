@@ -14,7 +14,7 @@
     "url": "git+https://github.com/alexandr90h/goit-js-hw-12-countries.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexandr90h@gmail.com>",
+  "author": "Alexander <alexandr90h@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexandr90h/goit-js-hw-12-countries/issues"
@@ -50,6 +50,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "lodash.debounce": "^4.0.8",
+    "pnotify": "^5.1.2"
   }
 }
