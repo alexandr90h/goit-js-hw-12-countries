@@ -18,7 +18,7 @@ defaults.delay = '1000';
 defaults.maxTextHeight = null;
 defaults.stack = new Stack({
     dir1: 'up',
-    firstpos1: 10,
+    firstpos1: 100,
     maxOpen: 1,
     context: refs.resultBoxElem,
 });
@@ -49,8 +49,8 @@ function notificationListCount() {
     if (refs.listItemCountElem != null) {
         refs.resultBoxElem.removeChild(refs.listItemCountElem);
     }
-    if (refs.cardCountElem != null) {
-        console.log("ergbebte");
+    else if (refs.cardCountElem != null) {
+        console.log(refs.cardCountElem);
         refs.resultBoxElem.removeChild(refs.cardCountElem);
     }
     alert('Too many matches found. Please enter a more specific query!');
