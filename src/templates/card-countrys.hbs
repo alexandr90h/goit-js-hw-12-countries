@@ -3,13 +3,18 @@
     <div class="card-content">
         <ul>
             <li>
-                <p>Capital: </p>{{capital}}
+                <p>Capital: </p><span>{{capital}}</span>
             </li>
             <li>
-                <p>Population: </p>{{population}}
+                <p>Population: </p><span>{{population}}</span>
             </li>
-            <li>
+            <li class="languages-item">
                 <p>Languages: </p>
+                <ul languages-list>
+                    {{#each languages}}
+                    <li>{{name}}</li>
+                    {{/each}}
+                </ul>
             </li>
         </ul>
         <img src="{{flag}}" alt="">
