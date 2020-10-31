@@ -22,16 +22,18 @@ defaults.stack = new Stack({
     maxOpen: 1,
     context: refs.resultBoxElem,
 });
-refs.inputTextElem.addEventListener('input', debounce(getCountName,500));
+refs.inputTextElem.addEventListener('input', debounce(getCountName(),500));
 function getCountName() {
+    let tempArr = [];
     let charNameCountr = refs.inputTextElem.value;
     fetch(`https://restcountries.eu/rest/v2/name/${charNameCountr}`).then(response => {
         return response.json();
     }).then((arr) => {
+        tempArr = arr;
         if (arr.length === 1) {
             return renderCartCount(arr);
         }
-        else if (arr.length > 10) {
+        else if (arr.length > 10 || tempArr!=arr) {
             return notificationListCount();
         }
         renderListCount(arr);
