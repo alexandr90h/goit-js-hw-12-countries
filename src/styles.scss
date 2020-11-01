@@ -54,22 +54,17 @@ body {
     margin-right: 10px;
   }
   img {
-    width: 200px;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    display: flex;
-    align-items: center;
+    width: 300px;
+    border: 2px solid black;
   }
 }
-.languages-list {
+.title-list {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 .languages-item {
-  list-style: inside;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: left;
 }

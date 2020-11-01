@@ -2,15 +2,15 @@
     <h2>{{name}}</h2>
     <div class="card-content">
         <ul>
-            <li>
+            <li class="title-list">
                 <p>Capital: </p><span>{{capital}}</span>
             </li>
-            <li>
+            <li class="title-list">
                 <p>Population: </p><span>{{population}}</span>
             </li>
             <li class="languages-item">
                 <p>Languages: </p>
-                <ul languages-list>
+                <ul>
                     {{#each languages}}
                     <li>{{name}}</li>
                     {{/each}}
