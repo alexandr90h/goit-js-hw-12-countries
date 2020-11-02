@@ -17,9 +17,12 @@ const refs = {
 // ----------------------------
 refs.inputTextElem.addEventListener('input', debounce(getCountName,500));
 function getCountName() {
-    let charNameCountr = refs.inputTextElem.value;
+    const charNameCountr = refs.inputTextElem.value;
+    if (charNameCountr === "") {
+        return cleaningResultBox();
+    }
     fetchCountries(charNameCountr).then((arr) => {
-        const {status} = arr;
+        const { status } = arr;
         if (arr.length ===1) {
            return renderCartCount(arr);
         }
@@ -40,6 +43,9 @@ function renderCartCount(arr) {
     const [{ name, flag, population, capital, languages }] = arr;
     refs.resultBoxElem.innerHTML = cardCountTempl({ name, flag, population, capital, languages });
 }
+function cleaningResultBox() {
+    refs.resultBoxElem.innerHTML = '';
+   }
 function notificationListCount() {
     refs.resultBoxElem.innerHTML = '';
     info({
